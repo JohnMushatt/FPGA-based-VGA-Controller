@@ -38,21 +38,21 @@ module Top(
     output vsync_out
     );
 
-wire clk_25;
+wire clk_147;
 wire rst = rst_n; // make reset active high
 wire inDisplayArea;
 wire [9:0] CounterX;
 wire [8:0] CounterY;
 wire [3:0] selector;
 
-clk_25MHz clk_video(
-  .CLK_IN1(clk),
-  .CLK_OUT1(clk_25),
-  .RESET(rst)
+clk_147MHz clk_video(
+  .clk_in1(clk),
+  .clk_out1(clk_147),
+  .reset(rst)
 );
 
-hvsync_generator hvsync(
-  .clk(clk_25),
+hvsync_generator_1680x1050 hvsync(
+  .clk(clk_147),
   .vga_h_sync(hsync_out),
   .vga_v_sync(vsync_out),
   .CounterX(CounterX),
@@ -68,7 +68,7 @@ hvsync_generator hvsync(
 // horizontal screen in strips 64 bytes wide
 assign selector = CounterX[9:6];
 
-always @(posedge clk_25)
+always @(posedge clk_147)
 begin
   if (inDisplayArea) begin
       /*

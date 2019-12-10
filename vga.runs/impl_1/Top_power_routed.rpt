@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Dec 10 15:20:33 2019
+| Date             : Tue Dec 10 16:32:51 2019
 | Host             : AK317A-12 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.168        |
+| Total On-Chip Power (W)  | 0.169        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.096        |
+| Dynamic (W)              | 0.097        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.2         |
@@ -52,16 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |       75 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       22 |     20800 |            0.11 |
-|   Register     |    <0.001 |       31 |     41600 |            0.07 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |       41 |       --- |             --- |
-| MMCM           |     0.095 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |       13 |       106 |           12.26 |
+| Clocks         |    <0.001 |        8 |       --- |             --- |
+| Slice Logic    |    <0.001 |       80 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       26 |     20800 |            0.13 |
+|   CARRY4       |    <0.001 |        3 |      8150 |            0.04 |
+|   Register     |    <0.001 |       35 |     41600 |            0.08 |
+|   Others       |     0.000 |        5 |       --- |             --- |
+| Signals        |    <0.001 |       52 |       --- |             --- |
+| MMCM           |     0.094 |        1 |         5 |           20.00 |
+| I/O            |     0.002 |       13 |       106 |           12.26 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.168 |          |           |                 |
+| Total          |     0.169 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.011 |       0.001 |      0.010 |
-| Vccaux    |       1.800 |     0.065 |       0.053 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vccint    |       1.000 |     0.011 |       0.002 |      0.010 |
+| Vccaux    |       1.800 |     0.065 |       0.052 |      0.013 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -124,13 +125,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------+-----------------+-----------------+
-| Clock       | Domain          | Constraint (ns) |
-+-------------+-----------------+-----------------+
-| clk0        | clk_video/clk0  |            10.0 |
-| clkdv       | clk_video/clkdv |            20.0 |
-| sys_clk_pin | clk             |            10.0 |
-+-------------+-----------------+-----------------+
++-----------------------+------------------------------------+-----------------+
+| Clock                 | Domain                             | Constraint (ns) |
++-----------------------+------------------------------------+-----------------+
+| clk                   | clk                                |            10.0 |
+| clk_out1_clk_147MHz   | clk_video/inst/clk_out1_clk_147MHz |             6.8 |
+| clk_out1_clk_147MHz_1 | clk_video/inst/clk_out1_clk_147MHz |             6.8 |
+| clkfbout_clk_147MHz   | clk_video/inst/clkfbout_clk_147MHz |            90.0 |
+| clkfbout_clk_147MHz_1 | clk_video/inst/clkfbout_clk_147MHz |            90.0 |
+| sys_clk_pin           | clk                                |            10.0 |
++-----------------------+------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -142,8 +146,9 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| Top         |     0.096 |
-|   clk_video |     0.096 |
+| Top         |     0.097 |
+|   clk_video |     0.095 |
+|     inst    |     0.095 |
 +-------------+-----------+
 
 

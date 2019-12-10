@@ -74,7 +74,9 @@ set rc [catch {
   set_property parent.project_path C:/Users/jemushatt/Desktop/vga/vga.xpr [current_project]
   set_property ip_output_repo C:/Users/jemushatt/Desktop/vga/vga.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   add_files -quiet C:/Users/jemushatt/Desktop/vga/vga.runs/synth_1/Top.dcp
+  read_ip -quiet c:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz.xci
   read_xdc C:/Users/jemushatt/Desktop/vga/vga.srcs/constrs_1/display_contraints.xdc
   link_design -top Top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
@@ -155,6 +157,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force Top.mmi }
   write_bitstream -force Top.bit 
   catch {write_debug_probes -quiet -force Top}
