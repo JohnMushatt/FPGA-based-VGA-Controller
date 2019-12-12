@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Dec 10 16:32:34 2019
-| Host         : AK317A-12 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Dec 11 17:59:56 2019
+| Host         : DESKTOP-243D5JF running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
 | Device       : xc7a35t
@@ -63,7 +63,7 @@ Table of Contents
 | No           | Yes                   | No                     |              21 |            5 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              11 |            2 |
+| Yes          | Yes                   | No                     |              11 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +--------------------------+----------------------+-----------------------------+------------------+----------------+
 |  clk_video/inst/clk_out1 |                      |                             |                2 |              3 |
 |  clk_video/inst/clk_out1 |                      | hvsync/SR[0]                |                2 |              9 |
-|  clk_video/inst/clk_out1 | hvsync/CounterXmaxed | hvsync/CounterY[10]_i_1_n_0 |                2 |             11 |
+|  clk_video/inst/clk_out1 | hvsync/CounterXmaxed | hvsync/CounterY[10]_i_1_n_0 |                3 |             11 |
 |  clk_video/inst/clk_out1 |                      | hvsync/CounterXmaxed        |                3 |             12 |
 +--------------------------+----------------------+-----------------------------+------------------+----------------+
 

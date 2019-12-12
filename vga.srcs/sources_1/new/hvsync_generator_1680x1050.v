@@ -3,28 +3,6 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 12/10/2019 04:02:25 PM
-// Design Name: 
-// Module Name: hvsync_generator_1680x1050
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
 // Create Date: 12/10/2019 02:56:10 PM
 // Design Name: 
 // Module Name: hvsync_generator

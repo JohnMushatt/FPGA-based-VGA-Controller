@@ -21,15 +21,10 @@
 
 
 module Top(
-    // 50MHz clock input
+    // 100MHz clock input
     input clk,
-    // Input from reset button (active low)
+    // Input from reset button: Middle button 
     input rst_n,
-    // cclk input from AVR, high when AVR is ready
-    input cclk,
-   
-  
-
     // VGA connections
     output reg [2:0] pixelR,
     output reg [2:0] pixelG,
@@ -37,7 +32,7 @@ module Top(
     output hsync_out,
     output vsync_out
     );
-
+//~147.17MHz clock to support the 1680x1050 @ 60Hz display
 wire clk_147;
 wire rst = rst_n; // make reset active high
 wire inDisplayArea;
@@ -45,12 +40,13 @@ wire [9:0] CounterX;
 wire [8:0] CounterY;
 wire [3:0] selector;
 
+//Clock booster to increase main clock speed to ~147.16MHz
 clk_147MHz clk_video(
   .clk_in1(clk),
   .clk_out1(clk_147),
   .reset(rst)
 );
-
+//Get current sync values + screen values
 hvsync_generator_1680x1050 hvsync(
   .clk(clk_147),
   .vga_h_sync(hsync_out),
@@ -67,7 +63,7 @@ hvsync_generator_1680x1050 hvsync(
 // use this bits from CounterX to divide the
 // horizontal screen in strips 64 bytes wide
 assign selector = CounterX[9:6];
-
+//Update display with strips of colors
 always @(posedge clk_147)
 begin
   if (inDisplayArea) begin

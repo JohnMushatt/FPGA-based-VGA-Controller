@@ -1,37 +1,39 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Dec 10 16:31:30 2019
-# Process ID: 25748
-# Current directory: C:/Users/jemushatt/Desktop/vga/vga.runs/synth_1
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Dec 11 17:58:03 2019
+# Process ID: 14816
+# Current directory: C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
-# Log file: C:/Users/jemushatt/Desktop/vga/vga.runs/synth_1/Top.vds
-# Journal file: C:/Users/jemushatt/Desktop/vga/vga.runs/synth_1\vivado.jou
+# Log file: C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.runs/synth_1/Top.vds
+# Journal file: C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Top.tcl -notrace
 Command: synth_design -top Top -part xc7a35tcpg236-1
 Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'clk_147MHz' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_147MHz' (customized with software release 2019.1) has a different revision in the IP Catalog.
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19000 
+INFO: Helper process launched with PID 19664 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 803.797 ; gain = 178.105
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 958.730 ; gain = 232.969
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/new/Top.v:23]
-INFO: [Synth 8-6157] synthesizing module 'clk_147MHz' [C:/Users/jemushatt/Desktop/vga/vga.runs/synth_1/.Xil/Vivado-25748-AK317A-12/realtime/clk_147MHz_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_147MHz' (1#1) [C:/Users/jemushatt/Desktop/vga/vga.runs/synth_1/.Xil/Vivado-25748-AK317A-12/realtime/clk_147MHz_stub.v:5]
-WARNING: [Synth 8-7023] instance 'clk_video' of module 'clk_147MHz' has 4 connections declared, but only 3 given [C:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/new/Top.v:48]
-INFO: [Synth 8-6157] synthesizing module 'hvsync_generator_1680x1050' [C:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/new/hvsync_generator_1680x1050.v:45]
-INFO: [Synth 8-6155] done synthesizing module 'hvsync_generator_1680x1050' (2#1) [C:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/new/hvsync_generator_1680x1050.v:45]
-WARNING: [Synth 8-689] width (10) of port connection 'CounterX' does not match port width (12) of module 'hvsync_generator_1680x1050' [C:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/new/Top.v:58]
-WARNING: [Synth 8-689] width (9) of port connection 'CounterY' does not match port width (11) of module 'hvsync_generator_1680x1050' [C:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/new/Top.v:59]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (3#1) [C:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/new/Top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/new/Top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_147MHz' [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.runs/synth_1/.Xil/Vivado-14816-DESKTOP-243D5JF/realtime/clk_147MHz_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_147MHz' (1#1) [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.runs/synth_1/.Xil/Vivado-14816-DESKTOP-243D5JF/realtime/clk_147MHz_stub.v:5]
+WARNING: [Synth 8-7023] instance 'clk_video' of module 'clk_147MHz' has 4 connections declared, but only 3 given [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/new/Top.v:44]
+INFO: [Synth 8-6157] synthesizing module 'hvsync_generator_1680x1050' [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/new/hvsync_generator_1680x1050.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'hvsync_generator_1680x1050' (2#1) [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/new/hvsync_generator_1680x1050.v:23]
+WARNING: [Synth 8-689] width (10) of port connection 'CounterX' does not match port width (12) of module 'hvsync_generator_1680x1050' [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/new/Top.v:54]
+WARNING: [Synth 8-689] width (9) of port connection 'CounterY' does not match port width (11) of module 'hvsync_generator_1680x1050' [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/new/Top.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (3#1) [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/new/Top.v:23]
 WARNING: [Synth 8-3331] design Top has unconnected port cclk
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 868.023 ; gain = 242.332
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1032.688 ; gain = 306.926
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -44,49 +46,50 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 868.023 ; gain = 242.332
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1032.688 ; gain = 306.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 868.023 ; gain = 242.332
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1032.688 ; gain = 306.926
 ---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1032.688 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz/clk_147MHz_in_context.xdc] for cell 'clk_video'
-Finished Parsing XDC File [c:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz/clk_147MHz_in_context.xdc] for cell 'clk_video'
-Parsing XDC File [C:/Users/jemushatt/Desktop/vga/vga.srcs/constrs_1/display_contraints.xdc]
-Finished Parsing XDC File [C:/Users/jemushatt/Desktop/vga/vga.srcs/constrs_1/display_contraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jemushatt/Desktop/vga/vga.srcs/constrs_1/display_contraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Parsing XDC File [c:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz/clk_147MHz_in_context.xdc] for cell 'clk_video'
+Finished Parsing XDC File [c:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz/clk_147MHz_in_context.xdc] for cell 'clk_video'
+Parsing XDC File [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/constrs_1/display_contraints.xdc]
+Finished Parsing XDC File [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/constrs_1/display_contraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/constrs_1/display_contraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 968.094 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1110.680 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 968.094 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1110.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 968.094 ; gain = 342.402
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1110.680 ; gain = 384.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 968.094 ; gain = 342.402
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1110.680 ; gain = 384.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz/clk_147MHz_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/jemushatt/Desktop/vga/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz/clk_147MHz_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz/clk_147MHz_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.srcs/sources_1/ip/clk_147MHz/clk_147MHz/clk_147MHz_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for clk_video. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 968.094 ; gain = 342.402
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1110.680 ; gain = 384.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 968.094 ; gain = 342.402
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1110.680 ; gain = 384.918
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,7 +143,7 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 WARNING: [Synth 8-3331] design Top has unconnected port cclk
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 968.094 ; gain = 342.402
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1110.680 ; gain = 384.918
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -151,16 +154,14 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_video/clk_out1' to pin 'clk_video/bbstub_clk_out1/O'
-INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 968.094 ; gain = 342.402
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1110.766 ; gain = 385.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 980.188 ; gain = 354.496
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1130.484 ; gain = 404.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -172,7 +173,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 981.723 ; gain = 356.031
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1132.023 ; gain = 406.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -199,8 +200,20 @@ INFO: [Synth 8-5365] Flop hvsync/inDisplayArea_reg is being inverted and renamed
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 986.504 ; gain = 360.813
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1136.809 ; gain = 411.047
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1136.809 ; gain = 411.047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
@@ -209,40 +222,28 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 986.504 ; gain = 360.813
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 986.504 ; gain = 360.813
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1136.809 ; gain = 411.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 986.504 ; gain = 360.813
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1136.809 ; gain = 411.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 986.504 ; gain = 360.813
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1136.809 ; gain = 411.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 986.504 ; gain = 360.813
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1136.809 ; gain = 411.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -280,27 +281,28 @@ Report Instance Areas:
 |2     |  hvsync |hvsync_generator_1680x1050 |    66|
 +------+---------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 986.504 ; gain = 360.813
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1136.809 ; gain = 411.047
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 986.504 ; gain = 260.742
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 986.504 ; gain = 360.813
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1136.809 ; gain = 333.055
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1136.809 ; gain = 411.047
 INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1146.973 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1002.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1153.211 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+22 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1002.660 ; gain = 616.453
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1002.660 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1153.211 ; gain = 696.555
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.211 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/jemushatt/Desktop/vga/vga.runs/synth_1/Top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/johnm/Desktop/FPGA-based-VGA-Controller/vga.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 10 16:32:00 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 11 17:59:01 2019...
